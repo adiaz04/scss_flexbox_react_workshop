@@ -1,19 +1,44 @@
+@import '../variables.scss';
+
 .gallery {
-  border: 1px solid #f00;
+  text-align: center;
+  
+  h2 {
+    color: $brand-primary;
+  }
+
+  p {
+    color: $brand-secondary;
+  }
 
   ul {
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: left;
+    flex-wrap: wrap;
+    justify-content: flex-end;
     list-style: none;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0;
 
     li {
       color: #0f0;
       font-weight: bold;
+      margin: 10px 5px 10px 5px;
 
       img {
-        height: 200px;
+        border-radius: 6px;
+        height: 315px;
+        object-fit: cover;
+        width: 250px;
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 545px) {
+  .gallery {
+    ul {
+      justify-content: space-evenly;
     }
   }
 }
