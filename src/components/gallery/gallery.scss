@@ -1,0 +1,19 @@
+.gallery {
+  border: 1px solid #f00;
+
+  ul {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+    list-style: none;
+
+    li {
+      color: #0f0;
+      font-weight: bold;
+
+      img {
+        height: 200px;
+      }
+    }
+  }
+}
