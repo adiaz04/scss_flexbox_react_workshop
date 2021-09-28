@@ -1,0 +1,70 @@
+@import '../variables.scss';
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+
+  .input-form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 390px;
+    justify-content: center;
+    list-style: none;
+    width: 40%;
+    
+    label {
+      font-size: 12pt;
+      font-weight: bold;
+      margin-bottom: 2px;
+    }
+
+    input {
+      height: 35px;
+      padding: 0 5px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      align-self: flex-end;
+      background-color: $brand-primary;
+      border-radius: 6px;
+      color: white;
+      font-weight: bold;
+      padding: 10px 0;
+      text-align: center;
+      width: 100px;
+
+      &:hover {
+        background-color: $brand-secondary;
+        cursor: pointer;
+      }
+    }
+
+  }
+
+  .display-new-image {
+    justify-content: center;
+    width: 40%;
+    img {
+      @include image-display(none);
+    }
+  }
+}
+
+@media only screen and (max-width: 545px) {
+  .form {
+    align-items: center;
+    flex-direction: column;
+
+    .input-form {
+      width: 90%
+    }
+
+    .display-new-image {
+      width: 90%;
+    }
+  }
+}

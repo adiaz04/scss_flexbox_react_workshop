@@ -1,2 +1,10 @@
 $brand-primary: rgb(28, 28, 133);
 $brand-secondary: rgb(73, 98, 209);
+
+@mixin image-display($border-color) {
+  border: 5px solid $border-color;
+  border-radius: 6px;
+  height: 315px;
+  object-fit: cover;
+  width: 250px;
+}
